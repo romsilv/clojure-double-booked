@@ -8,7 +8,7 @@
 (defn parse-date [date-str]
   (cond
     (nil? date-str) (throw (IllegalArgumentException. "Date string is null"))
-    (str/blank? date-str) (throw (IllegalArgumentException. "Date string empty"))
+    (str/blank? date-str) (throw (IllegalArgumentException. "Date string is empty"))
     :else
     (try
       (LocalDateTime/parse date-str formatter)

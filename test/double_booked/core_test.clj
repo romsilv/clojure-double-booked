@@ -11,12 +11,12 @@
 
   (testing "Null date string"
     (let [date-str nil]
-      (is (thrown-with-msg? IllegalArgumentException #"Date string is null or empty"
+      (is (thrown-with-msg? IllegalArgumentException #"Date string is null"
                             (parse-date date-str)))))
 
   (testing "Empty date string"
     (let [date-str ""]
-      (is (thrown-with-msg? IllegalArgumentException #"Date string is null or empty"
+      (is (thrown-with-msg? IllegalArgumentException #"Date string is empty"
                             (parse-date date-str)))))
 
   (testing "Invalid date format"
