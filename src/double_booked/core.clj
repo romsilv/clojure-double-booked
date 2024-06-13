@@ -45,6 +45,5 @@
 (defn -main []
   (let [events (dg/generate-random-events 100000 "2024-01-01T00:00:00" "2024-01-01T23:59:59")
         overlapping-events (find-overlapping-events events 10)]
-    (println "1-Generated events: " (take 10 events))
-    (println "2-Generated Overlapping events: " overlapping-events)
-    (println "3-Count of Generated overlapping events: " (count overlapping-events))))
+    (println "Generated Overlapping events: " overlapping-events)
+    (println "Count of Generated overlapping events: " (count overlapping-events))))
